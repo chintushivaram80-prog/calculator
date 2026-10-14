@@ -1,0 +1,43 @@
+
+print("===== Python Calculator =====")
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+print("\nSelect an operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+print("5. Modulus (%)")
+
+choice = input("Enter your choice (1-5): ")
+
+if choice == "1":
+    result = num1 + num2
+    print("Addition Result:", result)
+
+elif choice == "2":
+    result = num1 - num2
+    print("Subtraction Result:", result)
+
+elif choice == "3":
+    result = num1 * num2
+    print("Multiplication Result:", result)
+
+elif choice == "4":
+    if num2 != 0:
+        result = num1 / num2
+        print("Division Result:", result)
+    else:
+        print("Error: Cannot divide by zero!")
+
+elif choice == "5":
+    if num2 != 0:
+        result = num1 % num2
+        print("Modulus Result:", result)
+    else:
+        print("Error: Cannot calculate modulus by zero!")
+
+else:
+    print("Invalid choice! Please select 1 to 5.")
